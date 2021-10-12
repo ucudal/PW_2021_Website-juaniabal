@@ -1,26 +1,32 @@
 {
-  "name": "pw_2021_website-juaniabal",
+  "name": "playground-l9wy8dey",
   "version": "1.0.0",
-  "description": "[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=5423337&assignment_repo_type=AssignmentRepo)",
+  "description": "",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "browser-sync": "^2.27.5",
+    "tailwindcss": "^2.2.16"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server --serveStatic 'docs' --files '**/*'",
-    "tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./docs/styles.css",
+    "start": "browser-sync start --server 'docs' --files 'docs'",
+    "tailwind": "npx tailwindcss -i src/tailwind.css -o docs/style.css --jit",
     "tailwind:watch": "npm run tailwind -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://juaniabal: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@github.com/ucudal/PW_2021_Website-juaniabal.git"
+    "url": "git+https://github.com/leog/playground-l9wy8dey.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ucudal/PW_2021_Website-juaniabal/issues"
+    "url": "https://github.com/leog/playground-l9wy8dey/issues"
   },
-  "homepage": "https://github.com/ucudal/PW_2021_Website-juaniabal#readme",
-  "keywords": [],
-  "dependencies": {
-    "tailwind": "^4.0.0"
-  }
+  "homepage": "https://github.com/leog/playground-l9wy8dey#readme"
 }
