@@ -9,14 +9,16 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "browser-sync": "^2.27.5",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^2.2.16",
+    "uglify-js": "^3.14.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "browser-sync start --server 'docs' --files 'docs'",
     "tailwind": "npx tailwindcss -i src/tailwind.css -o docs/style.css --jit",
-    "tailwind:watch": "npm run tailwind -- --watch"
+    "tailwind:watch": "npm run tailwind -- --watch",
+    "uglify": "npx uglify-js src/script.js -o docs/script.min.js"
   },
   "repository": {
     "type": "git",
@@ -30,3 +32,4 @@
   },
   "homepage": "https://github.com/leog/playground-l9wy8dey#readme"
 }
+
