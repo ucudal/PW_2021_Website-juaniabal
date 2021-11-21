@@ -5,21 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
     <title>Juan Abal CV</title>
 </head>
 <body>
+    <div class="max-w-6xl mx-auto px-4" style="background: black;" id="hire-btn">
+        <button onclick="contact()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100 bg-white"> HIRE! </button>
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
+<div class="bg-black bg-opacity-50 inset-0 hidden justify-center items-center" id="overlay">
+    <div class="flex h-screen overflow-hidden items-center justify-center" style="background: #bdbdbd;">
+        <div class="container items-center px-5 py-12 lg:px-20">
+      <form id="formulario" name="formulario" class="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg">
+        <section class="flex flex-col w-full h-full p-1 overflow-auto">
+          <label for="name" class="text-base leading-7 text-blueGray-500 mb-5">Contact data</label>
+          
+        </section>
+        <div class="relative pt-4">
+            
+          <label  class="text-base leading-7 text-blueGray-500">Name</label>
+          <input type="text" id="name" name="name" placeholder="name" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+        </div>
+        <div class="relative pt-4">
+          <label  class="text-base leading-7 text-blueGray-500">Name of the organization</label>
+          <input type="text" id="organization" placeholder="Name of the organization" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+        </div>
+        <div class="relative pt-4">
+            <label class="text-base leading-7 text-blueGray-500">Comments</label>
+            <input type="text" id="comments" placeholder="Comments" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
+          </div>
+        <button onclick="contact()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contact </button>
+        <button onclick="showContacts()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contacted (js)</button>
+        </div>
+      </form>
+        </div>
+
+</div>
+<div class="full-form"></div>
 <div class="p-4 md:p-10 bg-white">
+
     <div class="flex justify-center text-xl font-bold tracking-widest text-gray-300">
         <h1>JUAN ABAL</h1>
     </div>
 
     <div class="grid col-span-1 md:flex items-center mt-10 justify-center">
-        <div class="md:mr-4 text-justify">
+        <div class="md:mr-4 text-justify bg-black">
             <img class="rounded-full" src="me.jpeg" alt="me">
+
         </div>
         <div class="">
         <div class="md:border-l-2 pl-4 p-2 col-span-2 text-justify mt-10 md:mt-0">
@@ -31,6 +64,7 @@
             </p>
         </div>
         </div>
+
     </div>
 
     <div class="grid col-span-1 md:flex items-center justify-center mt-20">
@@ -90,20 +124,13 @@
                         <div class="mb-10"></div>
                     </div>
                 </div>
-
-
-
-                
                 <div class="flex items-center relative">
                     <div class="hidden md:block w-20">
                         <div class="font-bold italic">2017 - 2020</div>
-                     
                     </div>
-                    
                     <div class="border-r-2 border-black absolute h-full left-1 md:left-20 top-2 z-10">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
                     </div>
-
                     <div class="ml-10">
                         <div class="font-bold">OCA</div>
                         <div class="italic md:mb-4">Software Developer</div>
@@ -113,20 +140,12 @@
                         <div class="mb-10">Collaboration in the creation of the company's app and in charge of the development of RESTful APIs for it</div>
                     </div>
                 </div>
-
-
-
-                
                 <div class="flex items-center relative">ç
                     
                     <div class="border-r-2 border-black absolute h-full left-1 md:left-20 top-2 z-10">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
                     </div>
-
-
                 </div>
-
-
             </div>
         </div>
         <div class="md:mr-20 md:w-1/3">
@@ -134,21 +153,15 @@
 
             <div class="relative mt-5 text-left">
                 <div class="flex items-center relative pb-5 justify-start">
-                    
                     <div class="border-r-2 border-black absolute h-full top-2 z-10 ">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
                     </div>
-
                     <div class="ml-6 pt-5">
                         
                         <div class="flex items-center relative">
                             <div class="hidden md:block w-20">
                                 <div class="font-bold italic">2015 - Present</div>
-                      
                             </div>
-                            
-
-        
                             <div class="ml-10">
                                 <div class="font-bold">Software Engineering</div>
                                 <div class="italic md:mb-4">Catholic University</div>
@@ -157,11 +170,8 @@
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
-                    
                 </div>
-
                 <div class="flex items-center relative pb-5 pt-5 justify-start">
                     
                     <div class="border-r-2 border-black absolute h-full top-2 z-10 ">
@@ -172,11 +182,7 @@
                     <div class="flex items-center relative">
                         <div class="hidden md:block w-20">
                             <div class="font-bold italic">2001 - 2014</div>
-             
                         </div>
-                        
-
-    
                         <div class="ml-10">
                             <div class="font-bold">Scientific oritentation</div>
                             <div class="italic md:mb-4">Seminario High School</div>
@@ -186,14 +192,9 @@
                         </div>
                     </div>
                     
-                </div>
-
-                
+                </div> 
             </div>
-            
-
             <h1 class="font-bold mt-5 mb-10">Languages</h1>
-
             <div class="relative mt-5 text-left">
                 <div class="flex items-center relative pb-5 justify-start">
                     
@@ -222,38 +223,34 @@
                     <div class="border-r-2 border-black absolute top-2 z-10 ">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
                     </div>
-
-
                 </div>
-            </div>
-
-
-
-
-<div class="flex h-screen overflow-hidden items-center justify-center" style="background: #edf2f7;">
-    <div class="container items-center px-5 py-12 lg:px-20">
-  <form id="formulario" name="formulario" class="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:w-1/2 ">
-    <section class="flex flex-col w-full h-full p-1 overflow-auto">
-      <label for="name" class="text-base leading-7 text-blueGray-500 mb-5">Contact me!</label>
-      
-    </section>
-    <div class="relative pt-4">
-      <label  class="text-base leading-7 text-blueGray-500">Name</label>
-      <input type="text" id="name" name="name" placeholder="name" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
     </div>
-    <div class="relative pt-4">
-      <label  class="text-base leading-7 text-blueGray-500">Name of the organization</label>
-      <input type="text" id="organization" placeholder="Name of the organization" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
-    </div>
-    <div class="relative pt-4">
-        <label class="text-base leading-7 text-blueGray-500">Comments</label>
-        <input type="text" id="comments" placeholder="Comments" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
-      </div>
-    <button onclick="contact()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contact </button>
-    <button onclick="showContacts()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contacted (js)</button>
-    </div>
-  </form>
 </div>
+</div>
+
+    
+    <script>
+        window.addEventListener('DOMContentLoaded', () =>{
+            const overlay = document.querySelector('#overlay')
+            const fullForm = document.querySelector('#full-form')
+            const delBtn = document.querySelector('#hire-btn')
+            const closeBtn = document.querySelector('#close-modal')
+
+            const toggleModal = () => {
+                overlay.classList.toggle('hidden')
+                fullForm.classList.toggle('hidden')
+                overlay.classList.toggle('flex')
+                fullForm.classList.toggle('flex')
+            }
+
+            delBtn.addEventListener('click', toggleModal)
+
+            closeBtn.addEventListener('click', toggleModal)
+        })
+
+    </script>
+
+
     <script src="script.js"></script>
 </body>
 </html>
