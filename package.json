@@ -9,6 +9,8 @@
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.19",
     "tsc": "^2.0.3",
@@ -21,7 +23,7 @@
     "start": "browser-sync start --server 'docs' --files 'docs'",
     "tailwind": "npx tailwindcss -i src/tailwind.css -o docs/style.css --jit",
     "tailwind:watch": "npm run tailwind -- --watch",
-    "uglify": "npx uglify-js src/script.js -o docs/script.min.js"
+    "uglify": "npx uglify-js src/script.js -o docs/script.min.js & npx uglify-js src/exp.js -o docs/exp.min.js"
   },
   "repository": {
     "type": "git",

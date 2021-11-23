@@ -15,7 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
 <div class="bg-black bg-opacity-50 inset-0 hidden justify-center items-center" id="overlay">
-    <div class="flex h-screen overflow-hidden items-center justify-center" style="background: #bdbdbd;">
+    <div id = "backdrop" class="flex h-screen overflow-hidden items-center justify-center" style="background: #bdbdbd;">
         <div class="container items-center px-5 py-12 lg:px-20">
       <form id="formulario" name="formulario" class="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg">
         <section class="flex flex-col w-full h-full p-1 overflow-auto">
@@ -36,13 +36,14 @@
             <input type="text" id="comments" placeholder="Comments" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2">
           </div>
         <button onclick="contact()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contact </button>
-        <button onclick="showContacts()" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-gray-100"> Contacted (js)</button>
-        </div>
+        <button id="closeBtn" class="w-auto px-2 py-1 my-1 mr-2 text-blueGray-500 transition duration-500 ease-in-out transform border rounded-md hover:text-blueGray-600 text-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"> Exit </button>
+
+    </div>
       </form>
         </div>
 
 </div>
-<div class="full-form"></div>
+<div id="full-form-v2" class="full-form"></div>
 <div class="p-4 md:p-10 bg-white">
 
     <div class="flex justify-center text-xl font-bold tracking-widest text-gray-300">
@@ -102,9 +103,9 @@
                 
                 <div class="flex items-center relative">
                     <div class="hidden md:block w-20">
-                        <div class="font-bold italic">2021</div>
+                        <div id="year-0" class="font-bold italic"></div>
                         <div class="md:flex space-x-1 text-xs">
-                            <div>April</div>
+                            <div id="month-0"></div>
                             <div>-</div>
                             <div>Pres.</div>
                         </div>                        
@@ -115,32 +116,32 @@
                     </div>
 
                     <div class="ml-10">
-                        <div class="font-bold">Mercado Libre</div>
-                        <div class="italic md:mb-4">Data Analyst</div>
+                        <div id="name-0" class="font-bold"></div>
+                        <div id="role-0" class="italic md:mb-4"></div>
                         <div class="mb-4 mt-2 md:hidden">
-                            <div class="font-bold">2021</div>
-                            <div class="text-xs">April - Present</div>
-                        </div>Development of webservices for other company's sectors. Along with the development team we look to design the best solution for our costumers.
-                        <div class="mb-10"></div>
+                            <div id="year-0-sm"class="font-bold">2021</div>
+                            <div id="month-0-sm"class="text-xs"></div>
+                        </div>
+                        <div class="mb-10" id="description-0"></div>
                     </div>
                 </div>
                 <div class="flex items-center relative">
                     <div class="hidden md:block w-20">
-                        <div class="font-bold italic">2017 - 2020</div>
+                        <div id="month-0-sm"class="font-bold italic">2017 - 2020</div>
                     </div>
                     <div class="border-r-2 border-black absolute h-full left-1 md:left-20 top-2 z-10">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
                     </div>
                     <div class="ml-10">
-                        <div class="font-bold">OCA</div>
-                        <div class="italic md:mb-4">Software Developer</div>
+                        <div id="name-1" class="font-bold"></div>
+                        <div id="role-1" class="italic md:mb-4"></div>
                         <div class="mb-4 mt-2 md:hidden">
-                            <div class="font-bold">2017 - 2020</div>
+                            <div id="year-1" class="font-bold"></div>
                         </div>
-                        <div class="mb-10">Collaboration in the creation of the company's app and in charge of the development of RESTful APIs for it</div>
+                        <div class="mb-10" id="description-1"></div>
                     </div>
                 </div>
-                <div class="flex items-center relative">ç
+                <div class="flex items-center relative">
                     
                     <div class="border-r-2 border-black absolute h-full left-1 md:left-20 top-2 z-10">
                         <i class="fas fa-circle -top-1 -ml-2 absolute"></i>
@@ -230,6 +231,16 @@
 
     
     <script>
+        window.onclick = function(event){
+            if(event.target == document.getElementById("backdrop")){
+                const overlay = document.querySelector('#overlay')
+                const backdrop = document.querySelector('#backdrop')
+                overlay.classList.toggle('hidden')
+                backdrop.classList.toggle('hidden')
+                
+            }
+        }
+        
         window.addEventListener('DOMContentLoaded', () =>{
             const overlay = document.querySelector('#overlay')
             const fullForm = document.querySelector('#full-form')
@@ -244,13 +255,14 @@
             }
 
             delBtn.addEventListener('click', toggleModal)
-
-            closeBtn.addEventListener('click', toggleModal)
+            
         })
+
 
     </script>
 
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
+    <script src="exp.min.js"></script>
 </body>
 </html>
