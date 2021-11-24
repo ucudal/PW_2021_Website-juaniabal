@@ -17,9 +17,8 @@ document.getElementById("contact").addEventListener("click", function(event){
     var name = document.getElementById("nam").value;
     var organization = document.getElementById("org").value;
     var comments = document.getElementById("commen").value;
-    
     const contact = new Contact(name,organization,comments);
-    contacts.push(contact);
+    contacts.push(contact); 
 
     var body = {
         nombreContacto: name
