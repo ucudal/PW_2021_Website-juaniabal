@@ -11,7 +11,6 @@ class Contact{
 }
 var contacts = [];
 
-
 function contact(event){
     event.preventDefault();
     var name = document.getElementById("name").value;
