@@ -10,20 +10,27 @@ class Contact{
     }
 }
 var contacts = [];
-function showContacts(){
-    
-    var names = "names: "
-    contacts.forEach(element => {
-        names += element.name  +", "
-    });
-    window.confirm(names);
-}
 
-function contact(){
+
+function contact(event){
+    event.preventDefault();
     var name = document.getElementById("name").value;
-    var organization = document.getElementById("organization").value;
-    var comments = document.getElementById("comments").value;
-
+    var organization = document.getElementById("org").value;
+    var comments = document.getElementById("commen").value;
+    
     const contact = new Contact(name,organization,comments);
     contacts.push(contact);
+
+    var body = {
+        nombreContacto: name
+    };
+    var url = "https://PW2021-APINode-juaniabal-1.juaniabal.repl.co/enviar-formulario";
+    fetch(url, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: { 'Content-Type': 'application/json' }
+    }).then(function (response) {
+        response.text().then(function (text) { alert(text); });   
+    });
+
 }
