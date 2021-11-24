@@ -15,8 +15,8 @@ var contacts = [];
 function contact(event){
     event.preventDefault();
     var name = document.getElementById("name").value;
-    var organization = document.getElementById("organization").value;
-    var comments = document.getElementById("comments").value;
+    var organization = document.getElementById("org").value;
+    var comments = document.getElementById("commen").value;
     
     const contact = new Contact(name,organization,comments);
     contacts.push(contact);
