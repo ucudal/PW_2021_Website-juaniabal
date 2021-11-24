@@ -11,10 +11,10 @@ class Contact{
 }
 var contacts = [];
 
-
-function contact(event){
-    event.preventDefault();
-    var name = document.getElementById("name").value;
+document.getElementById("contact").addEventListener("click", function(event){
+    event.preventDefault()
+  
+    var name = document.getElementById("nam").value;
     var organization = document.getElementById("org").value;
     var comments = document.getElementById("commen").value;
     
@@ -33,4 +33,4 @@ function contact(event){
         response.text().then(function (text) { alert(text); });   
     });
 
-}
+});
